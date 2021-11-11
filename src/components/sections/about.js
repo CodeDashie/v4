@@ -136,10 +136,10 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hi, I'm Shane and I enjoy creating creating and playing video games. My interest in
-              game development started back in 2009 when I decided to try the WarCraft 3 World
-              Editor — I ended up focusing on game design and programming to later on primarily
-              focus on programming &amp; CSS!
+              Hi, I'm Shane and I enjoy creating and playing video games. My interest in game
+              development started back in 2009 when I decided to try the WarCraft 3 World Editor and
+              have been an active member in the Hive Workshop Forums for 6 years — I ended up
+              focusing on game design and programming to later on primarily focus on programming.
             </p>
 
             <p>
@@ -174,7 +174,7 @@ const About = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/me.jpg"
+              src="../../images/me.png"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
