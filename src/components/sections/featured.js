@@ -244,6 +244,7 @@ const StyledProject = styled.li`
     ${({ theme }) => theme.mixins.boxShadow};
     grid-column: 6 / -1;
     grid-row: 1 / -1;
+    margin-bottom: 25px;
     position: relative;
     z-index: 1;
 
@@ -254,7 +255,7 @@ const StyledProject = styled.li`
     }
 
     a {
-      width: 800px;
+      width: 854px;
       height: 100%;
       background-color: var(--green);
       border-radius: var(--border-radius);
@@ -276,7 +277,7 @@ const StyledProject = styled.li`
       &:before {
         content: '';
         position: absolute;
-        width: 800px;
+        width: 854px;
         height: 100%;
         top: 0;
         left: 0;
@@ -323,6 +324,10 @@ const Featured = () => {
               tech
               github
               external
+              youtube0
+              youtube1
+              youtube2
+              youtube3
               cta
             }
             html
@@ -356,7 +361,18 @@ const Featured = () => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover, cta } = frontmatter;
+            const {
+              youtube0,
+              youtube1,
+              youtube2,
+              youtube3,
+              external,
+              title,
+              tech,
+              github,
+              cover,
+              cta,
+            } = frontmatter;
             const image = getImage(cover);
 
             return (
@@ -410,7 +426,60 @@ const Featured = () => {
                       </a>
                     </div>
                   </row>
-                  <row></row>
+                  <row>
+                    <div className="embed-responsive embed-responsive-16by9">
+                      <p>
+                        {youtube0 && (
+                          <iframe
+                            title={title}
+                            className="embed-responsive-item"
+                            width="854"
+                            height="480"
+                            src="https://www.youtube.com/embed/rHxoP1izwuM"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay;
+                      clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen></iframe>
+                        )}
+                        {youtube1 && (
+                          <iframe
+                            title={title}
+                            className="embed-responsive-item"
+                            width="854"
+                            height="480"
+                            src="https://www.youtube.com/embed/2Apbf_BIMmI"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay;
+                      clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen></iframe>
+                        )}
+                        {youtube2 && (
+                          <iframe
+                            title={title}
+                            className="embed-responsive-item"
+                            width="854"
+                            height="480"
+                            src="https://www.youtube.com/embed/nnIqEfbGnW4"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay;
+                      clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen></iframe>
+                        )}
+                        {youtube3 && (
+                          <iframe
+                            title={title}
+                            className="embed-responsive-item"
+                            width="854"
+                            height="480"
+                            src="https://www.youtube.com/embed/Ucv-FgGaWsg"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay;
+                      clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen></iframe>
+                        )}
+                      </p>
+                    </div>
+                  </row>
                 </tab>
               </StyledProject>
             );
