@@ -7,4 +7,6 @@ range: 'March 2020 '
 url: 'https://architectus.com.au/'
 ---
 
-- Continue previous teams work on VR airport project with NPC interactions and points jumping
+- Continue previous teams work on airport project
+- General Programming in Unreal Engine
+- Virtual Reality

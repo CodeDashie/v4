@@ -5,6 +5,7 @@ cover: './demo.png'
 github: 'https://github.com/bchiang7/halcyon-site'
 external: 'https://halcyon-theme.netlify.com/'
 youtube1: 'true'
+doc: 'Documentation'
 tech:
   - Unity
   - C#

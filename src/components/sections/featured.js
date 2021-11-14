@@ -478,6 +478,16 @@ const Featured = () => {
                             allowFullScreen></iframe>
                         )}
                       </p>
+                      {youtube1 && (
+                        <p>
+                          <iframe
+                            title="DOC"
+                            width="854"
+                            height="480"
+                            src="/doc.pdf"
+                            className="resume-link"></iframe>
+                        </p>
+                      )}
                     </div>
                   </row>
                 </tab>
