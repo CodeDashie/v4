@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
 // import { Footer } from '..';
-// import { email } from '@config';
+import { email } from '@config';
+import { Icon } from '@components/icons';
 
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -44,6 +45,39 @@ const StyledHeroSection = styled.section`
     ${({ theme }) => theme.mixins.bigButton};
     margin-top: 50px;
   }
+
+  .project-links {
+    a {
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    .cta {
+      ${({ theme }) => theme.mixins.smallButton};
+      margin: 10px;
+    }
+  }
+`;
+
+const StyledLinkWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  position: relative;
+
+  a {
+    font-family: var(--font-mono);
+    font-size: var(--fz-xxs);
+    line-height: var(--fz-lg);
+    letter-spacing: 0.1em;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-3px);
+    }
+  }
 `;
 
 const Hero = () => {
@@ -64,6 +98,21 @@ const Hero = () => {
   const three = <h3 className="big-heading">I'm a Unity Programmer</h3>;
   const four = (
     <>
+      <tabs>
+        <column colSm={6} colLg={6}>
+          <StyledLinkWrapper>
+            <a href={`mailto:${email}`}>{email}</a>
+          </StyledLinkWrapper>
+        </column>
+        <column colSm={6} colLg={6}>
+          <div className="project-links">
+            <a href="https://www.linkedin.com/in/shane-hoskin-b07410200/" aria-label="GitHub Link">
+              <Icon name="Linkedin" />
+            </a>
+          </div>
+        </column>
+      </tabs>
+
       <p>
         about to graduate from AIE Adelaide with a Graduate Diploma of Management (Learning) (2021)
         coming from a Advanced Diploma of Game Programming. Currently, I’m focused on building

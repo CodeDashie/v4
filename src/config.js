@@ -1,12 +1,7 @@
 module.exports = {
   email: 'shoskin@hotmail.com.au',
 
-  socialMedia: [
-    {
-      name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/shane-hoskin-b07410200/',
-    },
-  ],
+  socialMedia: [],
 
   navLinks: [
     {

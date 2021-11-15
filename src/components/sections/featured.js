@@ -452,7 +452,7 @@ const Featured = () => {
                 <iframe
                   title="DOC"
                   width="854"
-                  height="480"
+                  height="900"
                   src="/doc.pdf"
                   className="resume-link"></iframe>
               </p>

@@ -97,7 +97,7 @@ const StyledLinks = styled.div`
   ol {
     ${({ theme }) => theme.mixins.flexBetween};
     padding: 0;
-    margin: 0;
+    margin: 25px;
     list-style: none;
 
     li {
@@ -110,7 +110,6 @@ const StyledLinks = styled.div`
         padding: 10px;
 
         &:before {
-          content: '0' counter(item) '.';
           margin-right: 5px;
           color: var(--green);
           font-size: var(--fz-xxs);
@@ -201,15 +200,17 @@ const Nav = ({ isHome }) => {
           </>
         ) : (
           <>
-            <TransitionGroup component={null}>
-              {isMounted && (
-                <CSSTransition classNames={fadeClass} timeout={timeout}>
-                  <>{Logo}</>
-                </CSSTransition>
-              )}
-            </TransitionGroup>
-
             <StyledLinks>
+              <TransitionGroup component={null}>
+                {isMounted && (
+                  <CSSTransition classNames={fadeDownClass} timeout={timeout}>
+                    <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
+                      {ResumeLink}
+                    </div>
+                  </CSSTransition>
+                )}
+              </TransitionGroup>
+
               <ol>
                 <TransitionGroup component={null}>
                   {isMounted &&
@@ -223,16 +224,6 @@ const Nav = ({ isHome }) => {
                     ))}
                 </TransitionGroup>
               </ol>
-
-              <TransitionGroup component={null}>
-                {isMounted && (
-                  <CSSTransition classNames={fadeDownClass} timeout={timeout}>
-                    <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
-                      {ResumeLink}
-                    </div>
-                  </CSSTransition>
-                )}
-              </TransitionGroup>
             </StyledLinks>
 
             <TransitionGroup component={null}>
