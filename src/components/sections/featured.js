@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
@@ -13,6 +13,42 @@ const StyledProjectsGrid = styled.ul`
   a {
     position: relative;
     z-index: 1;
+  }
+`;
+
+const StyledProjectsSection = styled.li`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-size: clamp(24px, 5vw, var(--fz-heading));
+  }
+
+  .archive-link {
+    font-family: var(--font-mono);
+    font-size: var(--fz-sm);
+    &:after {
+      bottom: 0.1em;
+    }
+  }
+
+  .projects-grid {
+    ${({ theme }) => theme.mixins.resetList};
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 15px;
+    position: relative;
+    margin-top: 50px;
+
+    @media (max-width: 1080px) {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+
+  .more-button {
+    ${({ theme }) => theme.mixins.button};
+    margin: 80px auto 0;
   }
 `;
 
@@ -160,6 +196,7 @@ const StyledProject = styled.li`
     background-color: var(--light-navy);
     color: var(--light-slate);
     font-size: var(--fz-lg);
+    margin-bottom: 22px;
 
     @media (max-width: 768px) {
       padding: 20px 0;
@@ -342,6 +379,8 @@ const Featured = () => {
   const revealProjects = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
 
+  // Show more button
+
   useEffect(() => {
     if (prefersReducedMotion) {
       return;
@@ -350,30 +389,93 @@ const Featured = () => {
     sr.reveal(revealTitle.current, srConfig());
     revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
   }, []);
+  const projectInner = node => {
+    const { frontmatter } = node;
+    const { youtube0, youtube1, youtube2, youtube3, title } = frontmatter;
+
+    return (
+      <div className="project-inner">
+        <row>
+          <div className="embed-responsive embed-responsive-16by9">
+            <p>
+              {youtube0 && (
+                <iframe
+                  title={title}
+                  className="embed-responsive-item"
+                  width="854"
+                  height="480"
+                  src="https://www.youtube.com/embed/rHxoP1izwuM"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay;
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen></iframe>
+              )}
+              {youtube1 && (
+                <iframe
+                  title={title}
+                  className="embed-responsive-item"
+                  width="854"
+                  height="480"
+                  src="https://www.youtube.com/embed/2Apbf_BIMmI"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay;
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen></iframe>
+              )}
+              {youtube2 && (
+                <iframe
+                  title={title}
+                  className="embed-responsive-item"
+                  width="854"
+                  height="480"
+                  src="https://www.youtube.com/embed/nnIqEfbGnW4"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay;
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen></iframe>
+              )}
+              {youtube3 && (
+                <iframe
+                  title={title}
+                  className="embed-responsive-item"
+                  width="854"
+                  height="480"
+                  src="https://www.youtube.com/embed/Ucv-FgGaWsg"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay;
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen></iframe>
+              )}
+            </p>
+            {youtube1 && (
+              <p>
+                <iframe
+                  title="DOC"
+                  width="854"
+                  height="480"
+                  src="/doc.pdf"
+                  className="resume-link"></iframe>
+              </p>
+            )}
+          </div>
+        </row>
+      </div>
+    );
+  };
 
   return (
     <section id="projects">
       <h2 className="numbered-heading" ref={revealTitle}>
-        Some Things I’ve Built
+        Featured Projects
       </h2>
 
       <StyledProjectsGrid>
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const {
-              youtube0,
-              youtube1,
-              youtube2,
-              youtube3,
-              external,
-              title,
-              tech,
-              github,
-              cover,
-              cta,
-            } = frontmatter;
+            const { external, title, tech, github, cover, cta } = frontmatter;
             const image = getImage(cover);
+            const [showMore, setShowMore] = useState(false);
 
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
@@ -381,8 +483,6 @@ const Featured = () => {
                   <row>
                     <div className="project-content">
                       <div>
-                        <p className="project-overline">Featured Project</p>
-
                         <h3 className="project-title">
                           <a href={external}>{title}</a>
                         </h3>
@@ -391,6 +491,12 @@ const Featured = () => {
                           className="project-description"
                           dangerouslySetInnerHTML={{ __html: html }}
                         />
+
+                        <div className="project-image">
+                          <a href={external ? external : github ? github : '#'}>
+                            <GatsbyImage image={image} alt={title} className="img" />
+                          </a>
+                        </div>
 
                         {tech.length && (
                           <ul className="project-tech-list">
@@ -419,76 +525,18 @@ const Featured = () => {
                         </div>
                       </div>
                     </div>
-
-                    <div className="project-image">
-                      <a href={external ? external : github ? github : '#'}>
-                        <GatsbyImage image={image} alt={title} className="img" />
-                      </a>
-                    </div>
                   </row>
                   <row>
-                    <div className="embed-responsive embed-responsive-16by9">
-                      <p>
-                        {youtube0 && (
-                          <iframe
-                            title={title}
-                            className="embed-responsive-item"
-                            width="854"
-                            height="480"
-                            src="https://www.youtube.com/embed/rHxoP1izwuM"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay;
-                      clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen></iframe>
-                        )}
-                        {youtube1 && (
-                          <iframe
-                            title={title}
-                            className="embed-responsive-item"
-                            width="854"
-                            height="480"
-                            src="https://www.youtube.com/embed/2Apbf_BIMmI"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay;
-                      clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen></iframe>
-                        )}
-                        {youtube2 && (
-                          <iframe
-                            title={title}
-                            className="embed-responsive-item"
-                            width="854"
-                            height="480"
-                            src="https://www.youtube.com/embed/nnIqEfbGnW4"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay;
-                      clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen></iframe>
-                        )}
-                        {youtube3 && (
-                          <iframe
-                            title={title}
-                            className="embed-responsive-item"
-                            width="854"
-                            height="480"
-                            src="https://www.youtube.com/embed/Ucv-FgGaWsg"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay;
-                      clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen></iframe>
-                        )}
-                      </p>
-                      {youtube1 && (
-                        <p>
-                          <iframe
-                            title="DOC"
-                            width="854"
-                            height="480"
-                            src="/doc.pdf"
-                            className="resume-link"></iframe>
-                        </p>
-                      )}
-                    </div>
+                    <StyledProjectsSection>
+                      {showMore ? projectInner(node) : <></>}
+
+                      <button
+                        name={title}
+                        className="more-button"
+                        onClick={() => setShowMore(!showMore)}>
+                        Show {showMore ? 'Less' : 'More'}
+                      </button>
+                    </StyledProjectsSection>
                   </row>
                 </tab>
               </StyledProject>

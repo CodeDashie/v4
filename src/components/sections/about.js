@@ -12,6 +12,7 @@ const StyledAboutSection = styled.section`
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-gap: 50px;
+    color: var(--slate);
 
     @media (max-width: 768px) {
       display: block;
@@ -61,7 +62,7 @@ const StyledPic = styled.div`
     position: relative;
     width: 100%;
     border-radius: var(--border-radius);
-    background-color: var(--green);
+    //background-color: var(--green);
 
     &:hover,
     &:focus {
@@ -75,15 +76,15 @@ const StyledPic = styled.div`
 
       .img {
         filter: none;
-        mix-blend-mode: normal;
+        //mix-blend-mode: normal;
       }
     }
 
     .img {
       position: relative;
       border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1);
+      //mix-blend-mode: multiply;
+      //filter: grayscale(100%) contrast(1);
       transition: var(--transition);
     }
 
@@ -106,9 +107,9 @@ const StyledPic = styled.div`
     }
 
     &:after {
-      border: 2px solid var(--green);
-      top: 20px;
-      left: 20px;
+      border: 3px solid var(--green);
+      top: 0px;
+      left: 0px;
       z-index: -1;
     }
   }
@@ -138,11 +139,14 @@ const About = () => {
             <p>
               Hi, I'm Shane and I enjoy creating and playing video games. My interest in game
               development started back in 2009 when I decided to try the WarCraft 3 World Editor and
-              have been an active member in the Hive Workshop Forums for 6 years — I ended up
-              focusing on game design and programming to later on primarily focus on programming.
+              have been an active member at the Hive Workshop Forums from 2010 — I ended up focusing
+              on game design and programming (winning a modding competition) to later on primarily
+              focus on programming (Releasing a well priased advanced system).
             </p>
 
             <p>
+              In the last 3 years I've decided to study at AIE to get into game developemtn
+              professionally. Studying Advanced Diploma of Game Programming and a business cource
               Fast-forward to today, and I’ve had the privilege of working at{' '}
               <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
               <a href="https://starry.com/">a start-up</a>,{' '}
