@@ -114,9 +114,10 @@ const Hero = () => {
       </tabs>
 
       <p>
-        about to graduate from AIE Adelaide with a Graduate Diploma of Management (Learning) (2021)
-        coming from a Advanced Diploma of Game Programming. Currently, I’m focused on building
-        accessible, human-centered products at.
+        that developed an interest for game development through game modding starting back in 2009.
+        Deciding to go further than a hobby I studied Advanced Diploma of Game Programming at AIE
+        and am about to graduate from AIE Adelaide with a Graduate Diploma of Management (Learning)
+        (2021).
       </p>
     </>
   );
