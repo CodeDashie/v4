@@ -78,7 +78,6 @@ const StyledProject = styled.li`
   &:nth-of-type(odd) {
     .project-content {
       grid-column: 7 / -1;
-      text-align: right;
 
       @media (max-width: 1080px) {
         grid-column: 5 / -1;
@@ -86,37 +85,24 @@ const StyledProject = styled.li`
       @media (max-width: 768px) {
         grid-column: 1 / -1;
         padding: 40px 40px 30px;
-        text-align: left;
       }
       @media (max-width: 480px) {
         padding: 25px 25px 20px;
       }
     }
     .project-tech-list {
-      justify-content: flex-end;
-
       @media (max-width: 768px) {
         justify-content: flex-start;
       }
 
       li {
-        margin: 0 0 5px 20px;
-
-        @media (max-width: 768px) {
-          margin: 0 10px 5px 0;
-        }
+        margin: 0 10px 5px 0;
       }
     }
     .project-links {
-      justify-content: flex-end;
-      margin-left: 0;
-      margin-right: -10px;
-
-      @media (max-width: 768px) {
-        justify-content: flex-start;
-        margin-left: -10px;
-        margin-right: 0;
-      }
+      justify-content: flex-start;
+      margin-left: -10px;
+      margin-right: 0;
     }
     .project-image {
       grid-column: 1 / 8;

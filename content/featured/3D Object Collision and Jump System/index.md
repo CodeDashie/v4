@@ -2,8 +2,7 @@
 date: '1'
 title: '3D Object Collision and Jump System'
 cover: './demo.png'
-github: 'https://github.com/bchiang7/spotify-profile'
-external: 'https://spotify-profile.herokuapp.com/'
+external: 'https://www.hiveworkshop.com/threads/3d-object-collision-and-jump-system-v0-7-0-0-beta.263598/'
 youtube2: 'true'
 tech:
   - WarCraft III
@@ -11,4 +10,11 @@ tech:
   - SharpCraft World Editor
 ---
 
-A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.
+A highly advanced system created inside the WarCraft 3 engine
+hosted on [Hive Workshop](https://www.hiveworkshop.com/threads/3d-object-collision-and-jump-system-v0-7-0-0-beta.263598/) with a 5/5 star rating (9 ratings) and 800 downloads.
+
+Within the Wc3 engine it is built with 2D in mind. Within the
+engine using a community build extended language vJass (pseudo OOP)
+I was able to build from the ground up a 3D Object Collision system with character movement.
+
+The "Manual" can be found within [the thread](https://www.hiveworkshop.com/threads/3d-object-collision-and-jump-system-v0-7-0-0-beta.263598/) next to the "Description" tab.
