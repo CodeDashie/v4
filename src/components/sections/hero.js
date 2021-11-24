@@ -114,7 +114,7 @@ const Hero = () => {
       </tabs>
 
       <p>
-        that developed an interest for game development through game modding starting back in 2009.
+        that developed an interest in game development through game modding starting back in 2009.
         Deciding to go further than a hobby I studied Advanced Diploma of Game Programming at AIE
         and am about to graduate from AIE Adelaide with a Graduate Diploma of Management (Learning)
         (2021).

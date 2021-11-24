@@ -136,14 +136,14 @@ const About = () => {
           <div>
             <p>
               Hi, I'm Shane and I enjoy creating and playing video games. My interest in game
-              development started back in 2009 when I decided to try the WarCraft 3 World Editor and
+              development started back in 2009 when I decided to try the Warcraft 3 World Editor and
               have been an active member at the Hive Workshop Forums from 2010 — I ended up focusing
               on game design and programming (winning a modding competition) to later on primarily
-              focus on programming (Releasing a well priased advanced system).
+              focus on programming (Releasing a well praised advanced system).
             </p>
 
             <p>
-              In the last 3 years I've decided to study at AIE to get into game developemtn
+              In the last 3 years I've decided to study at AIE to get into game development
               professionally. Studying Advanced Diploma of Game Programming and a business course.
             </p>
           </div>

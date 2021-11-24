@@ -34,4 +34,4 @@ Can be controlled with:
 
 - X-Box controller
 - PC keyboard
-- Gamecube Controller
+- GameCube Controller
