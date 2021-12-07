@@ -352,6 +352,7 @@ const Featured = () => {
               youtube2
               youtube3
               cta
+              text
             }
             html
           }
@@ -376,7 +377,7 @@ const Featured = () => {
     revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
   }, []);
   const projectInner = node => {
-    const { frontmatter } = node;
+    const { frontmatter, html } = node;
     const { youtube0, youtube1, youtube2, youtube3, title } = frontmatter;
 
     return (
@@ -384,6 +385,8 @@ const Featured = () => {
         <row>
           <div className="embed-responsive embed-responsive-16by9">
             <p>
+              <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
+
               {youtube0 && (
                 <iframe
                   title={title}
@@ -458,8 +461,8 @@ const Featured = () => {
       <StyledProjectsGrid>
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
-            const { frontmatter, html } = node;
-            const { external, title, tech, github, cover, cta } = frontmatter;
+            const { frontmatter } = node;
+            const { external, title, tech, github, cover, cta, text } = frontmatter;
             const image = getImage(cover);
             const [showMore, setShowMore] = useState(false);
 
@@ -475,7 +478,7 @@ const Featured = () => {
 
                         <div
                           className="project-description"
-                          dangerouslySetInnerHTML={{ __html: html }}
+                          dangerouslySetInnerHTML={{ __html: text }}
                         />
 
                         <div className="project-image">

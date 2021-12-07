@@ -94,7 +94,7 @@ const Hero = () => {
   }, []);
 
   const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Shane Hoskin.</h2>;
+  const two = <h2 className="big-heading">Shane Hoskin</h2>;
   const three = <h3 className="big-heading">I'm a Unity Programmer</h3>;
   const four = (
     <>
@@ -114,10 +114,17 @@ const Hero = () => {
       </tabs>
 
       <p>
-        that developed an interest in game development through game modding starting back in 2009.
-        Deciding to go further than a hobby I studied Advanced Diploma of Game Programming at AIE
-        and am about to graduate from AIE Adelaide with a Graduate Diploma of Management (Learning)
-        (2021).
+        My current goal is to find work as a Unity programmer fulltime. I am also Starting my own
+        business as a solo Game Developer in my free time.
+      </p>
+      <p>
+        Wanting to go into the field professionally I studied Advanced Diploma of Game Programming
+        at AIE and am about to graduate from AIE Adelaide with a Graduate Diploma of Management
+        (Learning) (2021).
+      </p>
+      <p>
+        My interest in game development started through game modding starting back in 2009 with
+        Warcraft III and was active member at the Hive Workshop from 2010.
       </p>
     </>
   );

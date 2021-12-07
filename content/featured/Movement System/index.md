@@ -8,6 +8,11 @@ youtube3: 'true'
 tech:
   - Unity
   - C#
+text: '
+
+The full movement system for my first year group project. Includes object interactions and ledge grabs.
+
+'
 ---
 
 Character controller with:

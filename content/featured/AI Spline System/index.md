@@ -9,6 +9,7 @@ doc: 'Documentation'
 tech:
   - Unity
   - C#
+text: 'The AI System that makes my second year group project feel alive for Skates Delivery. Later also merged with Jack Smith-Hokings AI system'
 ---
 
 During 2020 while studying at AIE I was a programmer in a team of 7 (2 Designers, 2 Artists and 3 programmers). I was in charge of doing the AI systems for [Skatres Delivery](https://valorkr.itch.io/skates-delivery) [[Alt](https://drive.google.com/file/d/1c76uegHtl-lmVtWYAfRb5wz78sHyKQs4/view)].

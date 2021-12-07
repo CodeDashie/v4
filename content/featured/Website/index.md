@@ -9,6 +9,11 @@ tech:
   - JavaScript
   - Git-Fork
   - Styled Components
+text: '
+
+Cloned from <a href="https://brittanychiang.com/">Britanny's repository</a>. Built and coded with GatsbyJs.
+
+'
 ---
 
 Website using GatsbyJS.
