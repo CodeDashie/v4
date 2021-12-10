@@ -339,17 +339,22 @@ const Featured = () => {
           node {
             frontmatter {
               title
+              text2
               cover {
                 childImageSharp {
-                  gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+                  gatsbyImageData(width: 854, quality: 100, formats: [PNG])
+                }
+              }
+              code {
+                childImageSharp {
+                  gatsbyImageData(width: 854, quality: 100, formats: [PNG])
                 }
               }
               tech
               github
               external
               youtube0
-              youtube1
-              youtube2
+              youtube11
               youtube3
               cta
               text
@@ -378,14 +383,17 @@ const Featured = () => {
   }, []);
   const projectInner = node => {
     const { frontmatter, html } = node;
-    const { youtube0, youtube1, youtube2, youtube3, title } = frontmatter;
+    const { text2, youtube0, youtube1, youtube11, youtube3, title, code } = frontmatter;
+    const image = getImage(code);
 
     return (
       <div className="project-inner">
         <row>
           <div className="embed-responsive embed-responsive-16by9">
             <p>
-              <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
+              {html && (
+                <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
+              )}
 
               {youtube0 && (
                 <iframe
@@ -399,25 +407,13 @@ const Featured = () => {
             clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen></iframe>
               )}
-              {youtube1 && (
+              {youtube11 && (
                 <iframe
                   title={title}
                   className="embed-responsive-item"
                   width="854"
                   height="480"
-                  src="https://www.youtube.com/embed/2Apbf_BIMmI"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay;
-            clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen></iframe>
-              )}
-              {youtube2 && (
-                <iframe
-                  title={title}
-                  className="embed-responsive-item"
-                  width="854"
-                  height="480"
-                  src="https://www.youtube.com/embed/nnIqEfbGnW4"
+                  src="https://www.youtube.com/embed/hAwY1_HZJNo"
                   frameBorder="0"
                   allow="accelerometer; autoplay;
             clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -436,6 +432,15 @@ const Featured = () => {
                   allowFullScreen></iframe>
               )}
             </p>
+
+            {text2 && (
+              <div className="project-description" dangerouslySetInnerHTML={{ __html: text2 }} />
+            )}
+
+            <div className="project-image">
+              <GatsbyImage image={image} alt={title} className="img" />
+            </div>
+
             {youtube1 && (
               <p>
                 <iframe
@@ -445,6 +450,27 @@ const Featured = () => {
                   src="/doc.pdf"
                   className="resume-link"></iframe>
               </p>
+            )}
+            {youtube11 && (
+              <div
+                className="project-description"
+                dangerouslySetInnerHTML={{
+                  __html:
+                    'Earlier on in the year (2021) I worked as part of a team for a practice project. This AI system was used to merge with a previous programmers AI system (Combat AI) to complement it. The AI will do its attacks with choices on moving while attacking, stop at point and attach and attack and stop when within range. Both AIs end up working together with nothing breaking.',
+                }}
+              />
+            )}
+            {youtube11 && (
+              <iframe
+                title={title}
+                className="embed-responsive-item"
+                width="854"
+                height="480"
+                src="https://www.youtube.com/embed/270R4QChra4"
+                frameBorder="0"
+                allow="accelerometer; autoplay;
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen></iframe>
             )}
           </div>
         </row>

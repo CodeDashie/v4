@@ -1,15 +1,19 @@
 ---
 date: '0'
 title: 'AI Spline System'
+titl: 'AI Spline System'
 cover: './demo.png'
 github: 'https://github.com/bchiang7/halcyon-site'
 external: 'https://halcyon-theme.netlify.com/'
 youtube1: 'true'
+youtube11: 'true'
+code: './code.png'
 doc: 'Documentation'
 tech:
   - Unity
   - C#
-text: 'The AI System that makes my second year group project feel alive for Skates Delivery. Later also merged with Jack Smith-Hokings AI system'
+text: 'The AI System that makes my second year group project feel alive for Skates Delivery. Later also merged with Jack Smith-Hokings AI system.'
+text2: 'In this code snippet all nodes that are close together are merged and set speed is priotitized to a non default value. After an action list is set order is gathered from a priority value if they are different.'
 ---
 
 During 2020 while studying at AIE I was a programmer in a team of 7 (2 Designers, 2 Artists and 3 programmers). I was in charge of doing the AI systems for [Skatres Delivery](https://valorkr.itch.io/skates-delivery) [[Alt](https://drive.google.com/file/d/1c76uegHtl-lmVtWYAfRb5wz78sHyKQs4/view)].
@@ -23,7 +27,3 @@ Here is shown the spline system working as a traffic system
 - At traffic intersection and corners cars slow down.
 - At traffic intersection cars wait for passing cars to cross in depending on the lane they are on.
 - Cars are shown to intentionally ignore some node paths.
-
-Earlier on in the year (2021) I worked as part of a team for a practice project. This AI system was
-used to merge with a previous programmers AI system (Combat AI) to complement it.
-The AI will do its attacks with choices on moving while attacking, stop at point and attach and attack and stop when within range. Both AI's end up working together with nothing breaking.
