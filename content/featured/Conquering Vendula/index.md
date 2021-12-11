@@ -2,8 +2,7 @@
 date: '4'
 title: 'Conquering Vendula'
 cover: './demo2.png'
-github: 'https://github.com/bchiang7/halcyon-site'
-external: 'https://halcyon-theme.netlify.com/'
+external: 'https://www.hiveworkshop.com/threads/conquering-vendula-v2-0a.229210/'
 youtube0: 'true'
 tech:
   - WarCraft III

@@ -3,8 +3,7 @@ date: '0'
 title: 'AI Spline System'
 titl: 'AI Spline System'
 cover: './demo.png'
-github: 'https://github.com/bchiang7/halcyon-site'
-external: 'https://halcyon-theme.netlify.com/'
+external: 'https://valorkr.itch.io/skates-delivery'
 youtube1: 'true'
 youtube11: 'true'
 code: './code.png'
@@ -12,7 +11,7 @@ doc: 'Documentation'
 tech:
   - Unity
   - C#
-text: 'The AI System that makes my second year group project feel alive for Skates Delivery. Later also merged with Jack Smith-Hokings AI system.'
+text: 'The AI System that makes my second year group project feel alive for <a href="https://valorkr.itch.io/skates-delivery">Skates Delivery</a>. Later also merged with <a href="https://jacksmithhocking.wordpress.com/2020/11/26/error-404/">Jack Smith-Hokings AI system</a>.'
 text2: 'In this code snippet all nodes that are close together are merged and set speed is priotitized to a non default value. After an action list is set order is gathered from a priority value if they are different.'
 ---
 

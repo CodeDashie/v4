@@ -2,8 +2,8 @@
 date: '2'
 title: 'Movement System'
 cover: './demo.png'
-external: 'https://www.newline.co/courses/build-a-spotify-connected-app'
-cta: 'https://www.newline.co/courses/build-a-spotify-connected-app'
+external: 'https://www.youtube.com/watch?v=Ucv-FgGaWsg'
+cta: ''
 youtube3: 'true'
 tech:
   - Unity

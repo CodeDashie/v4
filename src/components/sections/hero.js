@@ -119,8 +119,8 @@ const Hero = () => {
       </p>
       <p>
         Wanting to go into the field professionally I studied Advanced Diploma of Game Programming
-        at AIE and am about to graduate from AIE Adelaide with a Graduate Diploma of Management
-        (Learning) (2021).
+        at AIE and have graduated from AIE Adelaide with a Graduate Diploma of Management (Learning)
+        in 2021.
       </p>
       <p>
         My interest in game development started through game modding starting back in 2009 with
