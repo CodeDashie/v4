@@ -121,21 +121,8 @@ const Hero = () => {
 
       <h4>Goals</h4>
       <p>
-        My current goal is to find work as a Unity programmer fulltime. I am also Starting my own
-        business as a solo Game Developer in my free time.
-      </p>
-
-      <h4>Education</h4>
-      <p>
-        Wanting to go into the field professionally I studied Advanced Diploma of Game Programming
-        at AIE and have graduated from AIE Adelaide with a Graduate Diploma of Management (Learning)
-        in 2021.
-      </p>
-
-      <h4>Where I started</h4>
-      <p>
-        My interest in game development started through game modding starting back in 2009 with
-        Warcraft III and was active member at the Hive Workshop from 2010.
+        I'm a graduate from AIE Adelaide doing (mostly) Unity programming and am looking for work. I
+        got my interest in programming as a kid from modding Warcraft III.
       </p>
     </>
   );
