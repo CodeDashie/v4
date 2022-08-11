@@ -1,5 +1,5 @@
 ---
-date: '3'
+date: '2'
 title: 'Website'
 cover: './demo.png'
 external: 'https://brittanychiang.com/'
