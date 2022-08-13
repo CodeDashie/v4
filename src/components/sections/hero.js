@@ -119,7 +119,6 @@ const Hero = () => {
         </column>
       </tabs>
 
-      <h4>Goals</h4>
       <p>
         I'm a graduate from AIE Adelaide doing (mostly) Unity programming and am looking for work. I
         got my interest in programming as a kid from modding Warcraft III.

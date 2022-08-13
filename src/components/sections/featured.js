@@ -383,7 +383,7 @@ const Featured = () => {
   }, []);
   const projectInner = node => {
     const { frontmatter, html } = node;
-    const { text2, youtube0, youtube1, youtube11, youtube3, title, code } = frontmatter;
+    const { text2, youtube11, youtube1, youtube0, youtube3, title, code } = frontmatter;
     const image = getImage(code);
 
     return (
