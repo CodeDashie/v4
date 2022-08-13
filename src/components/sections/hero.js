@@ -120,8 +120,8 @@ const Hero = () => {
       </tabs>
 
       <p>
-        I'm a graduate from AIE Adelaide doing (mostly) Unity programming and am looking for work. I
-        got my interest in programming as a kid from modding Warcraft III.
+        I'm a graduate from AIE Adelaide doing (mostly) Unity programming that is looking for work.
+        I got my interest in programming as a kid from modding Warcraft III.
       </p>
     </>
   );

@@ -10,7 +10,7 @@ tech:
   - SharpCraft World Editor
 text: '
 
-A highly advanced system created inside the WarCraft 3 engine hosted on <a href="https://www.hiveworkshop.com/threads/3d-object-collision-and-jump-system-v0-7-0-0-beta.263598/">Hive Workshop</a> with a 5/5 star rating (9 ratings) and 800 downloads.
+An advanced system created inside the WarCraft 3 engine hosted on <a href="https://www.hiveworkshop.com/threads/3d-object-collision-and-jump-system-v0-7-0-0-beta.263598/">Hive Workshop</a> with a 5/5 star rating (9 ratings) and 800 downloads.
 
 '
 text2: ''
